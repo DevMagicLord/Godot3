@@ -3,13 +3,16 @@
 List of Godot 3 templates and code 
 
 1)  2.5 D platformer template for Godot 3
-   Scripts are free to use for personnal or commercial projects.
-   3D art is placeholder
-   3D art is not allowed for distribution   
-   3D art is not allowed for commercial projects 
-   3D art is not allowed for re use.
+    Scripts are free to use for personnal or commercial projects.
+    3D art is placeholder
+    3D art is not allowed for distribution   
+    3D art is not allowed for commercial projects  
    
 
-2)  Vertex colors textures blending shader for Godot 3
+2)  Godot 3 blending shaders 
+    Vertex colors textures blending
+    Slope textures blending
+    Splat map textures blending
+   
 
 
