@@ -9,10 +9,9 @@ List of Godot 3 templates and code
     3D art is not allowed for commercial projects  
    
 
-2)  Godot 3 blending shaders 
-    Vertex colors textures blending
-    Slope textures blending
-    Splat map textures blending
+2)  Godot 3 vertex and slope textures blending shaders 
+    Splat map blending included
+	
    
 
 
