@@ -17,7 +17,7 @@ List of Godot 3 templates and code
 
 3)  Vertex wind movement shader based on Vertex color 
 
-	Vertex color to influence the speed fo wave movement
+	Vertex color to influence the speed for wave movement
 	
 	Can be changed to use other colors to control the amplitude of movement.
 	
