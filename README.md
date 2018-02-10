@@ -24,9 +24,12 @@ List of Godot 3 templates and code
 	
 4)  Navmesh controller
 
-	A new version including a scene example with Navigation and NavigationMeshInstance nodes.
+	Re written version of Navmesh example including a scene example with Navigation generated in Godot.
+			 
+			 
+5)  Navmesh with Physic controller for each Navmesh character
+
+	A new version using RigidBody for Navmesh moving entities.
 		
-    
-	
 
 
