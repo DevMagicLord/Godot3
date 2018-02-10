@@ -21,6 +21,11 @@ List of Godot 3 templates and code
 	
 	Can be changed to use other colors to control the amplitude of movement.
 	
+	
+4)  Navmesh controller
+
+	A new version including a scene example with Navigation and NavigationMeshInstance nodes.
+		
     
 	
 
