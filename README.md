@@ -30,6 +30,12 @@ List of Godot 3 templates and code
 5)  Navmesh with Physic controller for each Navmesh character
 
 	A new version using RigidBody for Navmesh moving entities.
+	
+	
+6)  Starfox like game basics
+
+	Starfox like player controls and camera
+	
 		
 
 
