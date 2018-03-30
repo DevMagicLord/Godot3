@@ -1,6 +1,6 @@
 # Godot3
 
-List of Godot 3 templates and code 
+Godot 3 projects, shaders and code.
 
 
 1)  2.5 D platformer template for Godot 3
@@ -12,7 +12,7 @@ List of Godot 3 templates and code
 
 2)  Godot 3 vertex and slope textures blending shaders
 
-    Splat map blending included
+    Splat map blending shader included
 
 
 3)  Vertex wind movement shader based on Vertex color 
