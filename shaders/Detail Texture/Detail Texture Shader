@@ -1,0 +1,31 @@
+    shader_type spatial;
+
+uniform float tex1res = 1;
+uniform float tex2res = 10;
+uniform sampler2D tex1Albedo;
+uniform sampler2D tex1Normal;
+uniform sampler2D tex2Albedo;
+uniform sampler2D tex2Normal;
+
+varying vec4 vertexColor;
+varying vec3 vertexNormal;
+
+void vertex() {
+vertexColor = COLOR; // make the normal the color
+vertexNormal = NORMAL;
+}
+
+void fragment() {
+vec3 a1 = texture(tex1Albedo, UV * tex1res).rgb;
+vec3 n1 = texture(tex1Normal, UV * tex1res).rgb;
+vec3 a2 = texture(tex2Albedo, UV * tex2res).rgb;
+vec3 n2 = texture(tex2Normal, UV * tex2res).rgb;
+
+    vec3 resultAlbedo = mix( a1 , a2, 0.5); 
+    ALBEDO =  resultAlbedo;
+    vec3 addNormals = mix(n1 *1.8,n2,0.5 );     
+    vec3 nResult = normalize(addNormals);
+    NORMALMAP = nResult;
+    ROUGHNESS = 0.5;
+
+}
