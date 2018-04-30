@@ -16,7 +16,7 @@
         vec3 albedoAdd = a1 + a2; 
         ALBEDO = clamp(albedoAdd,0,1);
                 
-        vec3 addNormals = n1 *0.5 + n2 *0.5 ;        
+        vec3 addNormals = n1 *0.6 + n2 *0.5 ;        
         NORMALMAP = clamp(addNormals,0,1);
         
         ROUGHNESS = 0.5;
