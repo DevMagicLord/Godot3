@@ -1,0 +1,6 @@
+
+blending = 0.5 
+animation speed = 2 because it looks better
+
+anim_player.play(anim_to_play,0.5,2,false) 
+
