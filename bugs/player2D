@@ -1,0 +1,115 @@
+extends KinematicBody2D
+
+
+### player UI ###
+var UI
+
+### player states ###
+var state = "Idle"
+onready var AP = get_node("AnimationPlayer")
+var gh
+
+### player attributes health ###
+var hp = 100 #_ready
+var hpTotal = 100 #_ready
+
+
+### player attributes magic points ###
+var mp = 100 #_ready
+var mpTotal = 100 #_ready
+var regenerationInterval = 5 # 5 secs
+var regenerationTime = 0
+var regenerationAmount = 1
+
+
+### properties related to movement ###
+var gravity = 450.0
+export var jumpSpeed = 120
+var walkForce = 600
+var walkSpeedMin = 10
+var walkSpeedMax = 200
+export var stopForce = 1300
+var lookingRight = true
+var falling = false
+var addGroundHit = false
+var onAirTime = 0
+export var maxOnAirTime = 0.3
+var playerSprite
+
+var velocity = Vector2()
+var direction
+
+
+### inputs ###
+var up
+var down
+var left
+var right
+var jump
+var jumpJustReleased 
+var jumpKeyReleased = false
+var wasJumping = false
+var dontJumpWithSameKeyPressed = false
+
+### effects ###
+const groundHit = preload("res://Scenes/Effects/GroundHit/GroundHit.tscn")
+
+
+
+
+#-------------------------------------
+# _READY
+#-------------------------------------
+func _ready():
+	playerSprite = get_node("Sprite")
+	UI = get_node("UI")
+
+
+	### health ###
+	UI.healthBar.value = hp 
+	UI.healthBar.max_value = hpTotal
+	
+	### magic points ###
+	UI.magicPointsBar.value = mp
+	UI.magicPointsBar.max_value = mpTotal
+	
+ 
+func _process(delta):
+	
+	velocity.x  = 0 
+	
+	left = Input.is_action_pressed("Left")
+	right = Input.is_action_pressed("Right")
+
+	if left:
+		velocity.x = -walkSpeedMax/3 
+		lookingRight = false
+		state = "Walk"
+	elif right: 
+		velocity.x = walkSpeedMax/3 
+		lookingRight = true
+		state = "Walk"
+	else:
+			state = "Idle"
+		
+	playerSprite.flip_h = !lookingRight	
+
+		
+#-------------------------------------
+# _PHYSICS_PROCESS
+#-------------------------------------
+func _physics_process(delta):
+	 
+		
+	### player movement ###
+	#add gravity
+	direction = Vector2(0, gravity)
+ 	
+	velocity += direction * delta  #Integrate forces to velocity
+
+	 
+	velocity = move_and_slide(velocity, Vector2(0, -1)) # Integrate velocity into motion and move
+
+ 	
+ 
+ 
